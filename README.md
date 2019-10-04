@@ -2,7 +2,9 @@
 
 ***Installation :***  
 Mettre tous les fichiers avec les dossiers "CPool_Day01_2019", "CPool_Day02_2019", etc...  
-Donner les droits d'exécution à "installer.sh" et l'exécuter.
+Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :  
+./installer.sh $epitech_email_adress  
+avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
 
 ***Commandes***
 - ./mkfile.sh $Day $main_function  
