@@ -1,4 +1,5 @@
-echo -n "cd tests\ncp -f " > temp.sh
+cd tests
+echo -n -e "cp -f " > temp.sh
 ls "../CPool_$1_2019" | sed -z "s/\n/ /g" >> temp.sh
 echo "../CPool_$1_2019" >> temp.sh
 ./temp.sh
