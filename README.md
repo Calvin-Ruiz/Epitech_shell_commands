@@ -7,6 +7,8 @@ Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
 
 ***Commandes***
+- ./run
+  compile et lance la totalité du contenu de "tests" (note : la fonction main doit être dans "TESTER.c")
 - ./mkfile.sh $Day $main_function  
   créé le fichier correspondant avec le header et la fonction principale dans "tests"  
 - ./append.sh $Day $filename  
@@ -21,3 +23,7 @@ $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
 $filename désigne le nom du fichier  
 Pour les fichiers avec "S" ajouté devant, $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")
+
+***Attention : Il est nécessaire de savoir créer un répertoire, effectuer un commit et compiler sans ces shells.***
+Il est possible que ces commandes ne fonctionnent pas pour tous les cas de figures.  
+Il faut donc être capable d'effectuer ces actions sans l'aide de ces shell pour être paré à toute éventualité.
