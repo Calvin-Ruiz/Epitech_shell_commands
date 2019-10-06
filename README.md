@@ -24,6 +24,6 @@ $main_function désigne la fonction principale (par exemple my_put_nbr ou my_str
 $filename désigne le nom du fichier  
 Pour les fichiers avec "S" ajouté devant, $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")
 
-***Attention : Il est nécessaire de savoir créer un répertoire, effectuer un commit et compiler sans ces shells.***
+***Attention : Il est nécessaire de savoir créer un répertoire, effectuer un commit et compiler sans ces shells.***  
 Il est possible que ces commandes ne fonctionnent pas pour tous les cas de figures.  
 Il faut donc être capable d'effectuer ces actions sans l'aide de ces shell pour être paré à toute éventualité.
