@@ -1,5 +1,5 @@
 cd tests
 echo -n "gcc " > temp.sh
-ls | grep "./*.c" | sed -z "s/\n/ /g" | sed "s/ $/\n/g" >> temp.sh
+ls | grep "./*.c" | grep -v "~" | grep -v "#" | sed -z "s/\n/ /g" | sed "s/ $/\n/g" >> temp.sh
 ./temp.sh
 ./a.out
