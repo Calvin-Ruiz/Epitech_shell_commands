@@ -18,7 +18,7 @@ avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.e
     effectue un commit avec $comment comme description du commit (à écrire entre guillements (exemple : "update task04"))  
       **Attention : ne met pas à jour les sous-fichiers !**  
 - ./new_repository.sh $Day  
-  créé un nouveau répertoire et le clone  
+  créé un nouveau répertoire, le clone et y implémente le contenu de tests/lib  
   
 $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)  
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
