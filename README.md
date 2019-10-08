@@ -14,7 +14,8 @@ avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.e
 - ./append.sh $Day $filename  
   ajoute le fichier au répertoire correspondant et effectue un commmit avec un message généré automatiquement  
 - ./sync.sh $Day $comment  
-  met à jour tous les fichiers déjà **présents dans le répertoire désigné** avec ceux de "tests"  
+  met à jour tous les **fichiers** déjà **présents dans le répertoire désigné** avec ceux de "tests"  
+  **Attention : ne met pas à jour les sous-fichiers !**
     effectue un commit avec $comment comme description du commit (à écrire entre guillements (exemple : "update task04"))  
 - ./new_repository.sh $Day  
   créé un nouveau répertoire et le clone  
