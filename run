@@ -1,4 +1,4 @@
 cd tests
 rm -r -f ./*~ */*~
-gcc -W -Wall -Wextra *.c
+gcc -W -Wall -Wextra *.c lib/my/*.c
 ./a.out
