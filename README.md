@@ -8,7 +8,7 @@ avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.e
 
 ***Commandes***
 - ./run
-  compile et lance la totalité du contenu de "tests" (note : la fonction main doit être dans "TESTER.c")
+  compile et lance la totalité du contenu de "tests" et "tests/lib/my" (note : la fonction main doit être dans "TESTER.c")
 - ./mkfile.sh $Day $main_function  
   créé le fichier correspondant avec le header complet et la fonction principale dans "tests" et l'ouvre avec emacs  
 - ./append.sh $Day $filename  
