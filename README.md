@@ -16,7 +16,7 @@ avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.e
 - ./sync.sh $Day $comment  
   met à jour tous les **fichiers** déjà **présents dans le répertoire désigné** avec ceux de "tests"  
     effectue un commit avec $comment comme description du commit (à écrire entre guillements (exemple : "update task04"))  
-      **Attention : ne met pas à jour les sous-fichiers !**  
+      **Attention : ne pas mettre de dossiers dans 'tests', uniquement des fichiers (excepté 'lib')**  
 - ./new_repository.sh $Day  
   créé un nouveau répertoire, le clone et y implémente le contenu de tests/lib  
   
