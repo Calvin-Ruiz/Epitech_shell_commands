@@ -1,8 +1,7 @@
 cd tests
-echo -n "cp -f " > temp.sh
+echo -n "cp -f -u " > temp.sh
 ls "../CPool_Day$1_2019" | sed -z "s/\n/ /g" >> temp.sh
-echo -n "../CPool_Day$1_2019\ncd include\ncp -f " >> temp.sh
-ls "../../CPool_Day$1_2019/include" | sed -z "s/\n/ /g" >> temp.sh
+echo -n -e "../CPool_Day$1_2019\ncp -f -r -u lib include ../CPool_Day$1_2019" >> temp.sh
 ./temp.sh
 cd "../CPool_Day$1_2019"
 git add --all
