@@ -6,6 +6,10 @@ Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :
 ./installer.sh $epitech_email_adress  
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
 
+***Update :***
+./update.sh $epitech_email adress  
+avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
+
 ***Commandes***
 - ./run
   compile et lance la totalité du contenu de "tests" et "tests/lib/my" (note : la fonction main doit être dans "TESTER.c")
