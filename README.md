@@ -7,10 +7,10 @@ Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
 
 ***Update :***
-Utilisez simplement la commande suivante :
-./update.sh
-**Attention : Pour les anciennes versions, utiliser les instructions du README.md présent dans votre répertoire**
-
+Utilisez simplement la commande suivante :  
+./update.sh  
+**Attention : Pour les anciennes versions, utiliser les instructions du README.md présent dans votre répertoire**  
+  
 ***Commandes***
 - ./run
   compile et lance la totalité du contenu de "tests" et "tests/lib/my" (note : la fonction main doit être dans "TESTER.c")
