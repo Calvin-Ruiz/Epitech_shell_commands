@@ -23,7 +23,8 @@ avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.e
 $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)  
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
 $filename désigne le nom du fichier  
-Pour les fichiers avec "S" ajouté devant, $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")
+Pour les fichiers avec "S" ajouté devant, $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")  
+Les fichiers avec "h" ajouté devant sont pour les headers.
 
 ***Attention : Il est nécessaire de savoir créer un répertoire, effectuer un commit et compiler sans ces shells.***  
 Il est possible que ces commandes ne fonctionnent pas pour tous les cas de figures.  
