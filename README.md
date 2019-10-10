@@ -25,7 +25,8 @@ Utilisez simplement la commande suivante :
       *Note : Je n'ai pas réussi à enlever les messages d'erreurs, mais il fonctionne.*  
 - ./new_repository.sh $Day  
   créé un nouveau répertoire, le clone et y implémente le contenu de tests/lib  
-  
+  pour la version SANS "S" devant, lance ./update.sh après avoir créé le nouveau répertoire  
+
 $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)  
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
 $filename désigne le nom du fichier  
