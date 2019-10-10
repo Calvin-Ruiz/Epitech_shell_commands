@@ -7,8 +7,9 @@ Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
 
 ***Update :***
-./update.sh $epitech_email adress  
-avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)
+Utilisez simplement la commande suivante :
+./update.sh
+**Attention : Pour les anciennes versions, utiliser les instructions du README.md présent dans votre répertoire**
 
 ***Commandes***
 - ./run
