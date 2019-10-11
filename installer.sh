@@ -15,7 +15,7 @@ echo -e -n "#!bin/bash
 git clone https://github.com/Calvin-Ruiz/Epitech_shell_commands.git
 mv -f Epitech_shell_commands/* \"./\"
 chmod -c 755 installer.sh
-rm Epitech_shell_commands
+rm -f -r Epitech_shell_commands
 ./installer.sh $1" > update.sh
 chmod -c 755 run new_repository.sh sync.sh mkfile.sh hmkfile.sh append.sh happend.sh Snew_repository.sh Ssync.sh Smkfile.sh Shmkfile.sh Sappend.sh Shappend.sh update.sh
 mkdir -p ./tests/include
