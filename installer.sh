@@ -15,7 +15,7 @@ mv -f Epitech_shell_commands/* \"./\"
 chmod -c 755 installer.sh
 rm -f -r Epitech_shell_commands
 ./installer.sh $1" > update.sh
-chmod -s 755 run new_repository.sh sync.sh mkfile.sh hmkfile.sh append.sh happend.sh Snew_repository.sh Ssync.sh Smkfile.sh Shmkfile.sh Sappend.sh Shappend.sh update.sh
+chmod -s 755 run new_repository.sh sync.sh mkfile.sh hmkfile.sh append.sh happend.sh mkfile.sh Snew_repository.sh Ssync.sh Smkfile.sh Shmkfile.sh Sappend.sh Shappend.sh Smmkfile.sh update.sh
 mkdir -p ./tests/include
 mv TESTER.c tests/TESTER.c
 cd tests
