@@ -16,6 +16,8 @@ Utilisez simplement la commande suivante :
   compile et lance la totalité du contenu de "tests" et "tests/lib/my" (note : la fonction main doit être dans "TESTER.c")
 - ./mkfile.sh $Day $main_function  
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free, et la fonction principale dans "tests" puis l'ouvre avec emacs  
+- ./mmkfile.sh $Day
+  créé le makefile correspondant avec le header complet (pour Smmkfile, ouvre le makefile créé pour vérifier le header)
 - ./append.sh $Day $filename  
   ajoute le fichier au répertoire correspondant et effectue un commmit avec un message généré automatiquement  
 - ./sync.sh $Day $comment  
