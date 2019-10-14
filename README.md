@@ -1,4 +1,9 @@
 # Epitech_shell_commands
+Avec ces shells, vous travaillerez dans le dossier "tests" et non dans votre répertoire de dépôt,  
+  compilerez TOUS vos fichiers .c ensemble à chaque test pour ne pas avoir la mauvaise surprise du "build faild" à la moulinette, sans JAMAIS risquer de commiter un "main" par erreur, le "main" étant dans un fichier séparé (TESTER.c),  
+  gagnerez beaucoup de temps,  
+  éviterez de committer un fichier du type "#backup#", ".#file.c" ou encore "file.c~", ces derniez restant paisiblement dans "tests" et n'en sortant JAMAIS !  
+  gagnerez du temps dans création du header que vous n'aurez plus qu'à vérifier, et pour créer un début de la fonction principale !  
 
 ***Installation :***  
 Mettre tous les fichiers avec les dossiers "CPool_Day01_2019", "CPool_Day02_2019", etc...  
