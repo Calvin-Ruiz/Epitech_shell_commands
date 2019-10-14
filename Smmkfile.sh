@@ -12,7 +12,7 @@ NAME = $2
 all :	$(NAME)
 
 $(NAME):
-	gcc -o $(NAME) *.c ../include/*.h
+	gcc -o $(NAME) *.c ../include/*.h -L./lib/ -lmy
 
 clean:
 	rm -f *.o
