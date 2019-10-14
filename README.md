@@ -28,6 +28,9 @@ Utilisez simplement la commande suivante :
 - ./new_repository.sh $Day  
   créé un nouveau répertoire, le clone et y implémente le contenu de tests/lib  
   pour la version SANS "S" devant, lance ./update.sh après avoir créé le nouveau répertoire  
+- ./help.sh $command_name  
+  Affiche l'aide concernant le shell fourni en argument ($command_name)  
+  Si rien n'est spécifié, affiche la totalité des commandes et la signification de $Day, $main_function, etc.  
 
 $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)  
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
