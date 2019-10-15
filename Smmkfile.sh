@@ -1,4 +1,3 @@
-#!/bin/bash
 cd "CPool_$1_2019"
 echo -e "##
 ## EPITECH PROJECT, 2019
@@ -9,16 +8,16 @@ echo -e "##
 
 NAME = $2
 
-all :	$(NAME)
+all :	\$(NAME)
 
-$(NAME):
-	gcc -o $(NAME) *.c ../include/*.h -L./lib/ -lmy
+\$(NAME):
+	gcc -o \$(NAME) *.c include/*.h -L./lib/ -lmy
 
 clean:
 	rm -f *.o
 
 fclean:	clean
-	rm -f $(NAME)
+	rm -f \$(NAME)
 
 re:	fclean all" > "Makefile"
 emacs "Makefile"
