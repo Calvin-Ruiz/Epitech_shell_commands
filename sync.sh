@@ -1,7 +1,7 @@
 cd tests
-rm -r -f ./include/*~
-rm -r -f ./include/.#*
-rm -r -f ./include/#*#
+rm -r -f ./lib/my/*~
+rm -r -f ./lib/my/.#*
+rm -r -f ./lib/my/#*#
 echo -n "cp -f " > temp.sh
 ls "../CPool_Day$1_2019" | sed -z "s/\n/ /g" >> temp.sh
 echo -n -e "../CPool_Day$1_2019\ncp -f -r lib ../CPool_Day$1_2019\ncd include\ncp -f -r " >> temp.sh
