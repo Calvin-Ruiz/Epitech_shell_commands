@@ -5,4 +5,4 @@ git add --all
 git commit -m "auto-commit $2"
 git push origin master
 cd ../..
-echo -n -e "| grep --invert-match $2.h" > appened
+echo -n -e "| grep --invert-match $2.h " >> appened
