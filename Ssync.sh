@@ -12,3 +12,9 @@ cd "../CPool_$1_2019"
 git add --all
 git commit -m "$2"
 git push origin master
+echo "Unaffected files :"
+echo -n -e "echo -n -e \"" > temp.sh
+cat created >> temp.sh
+echo -n -e "\"" >> temp.sh
+cat appened >> temp.sh
+./temp.sh
