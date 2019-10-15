@@ -1,4 +1,3 @@
-#!/bin/bash
 echo -e "echo \"------- Création du répertoire n°\$1 -------\"
 blih -u $1 repository create \"CPool_Day\$1_2019\"
 blih -u $1 repository setacl \"CPool_Day\$1_2019\" ramassage-tek r
