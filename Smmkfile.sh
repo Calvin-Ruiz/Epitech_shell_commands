@@ -19,5 +19,16 @@ clean:
 fclean:	clean
 	rm -f \$(NAME)
 
-re:	fclean all" > "Makefile"
+re:	fclean all
+
+push:	fclean
+	rm -f \"*#\" \"*~\" \".#*\"
+	git add --all
+	git commit -m \"auto-push\"
+	git push origin master
+
+pull:
+	git pull origin master
+
+sync:	pull	push" > "Makefile"
 emacs "Makefile"
