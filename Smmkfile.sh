@@ -11,7 +11,7 @@ NAME = $2
 all :	\$(NAME)
 
 \$(NAME):
-	gcc -o \$(NAME) *.c include/*.h -L./lib/ -lmy
+	gcc -o \$(NAME) *.c include/*.h
 
 clean:
 	rm -f *.o
@@ -22,7 +22,9 @@ fclean:	clean
 re:	fclean all
 
 push:	fclean
-	rm -f \"*#\" \"*~\" \".#*\"
+	rm -f *#
+	rm -f *~
+	rm -f .#*
 	git add --all
 	git commit -m \"auto-push\"
 	git push origin master
