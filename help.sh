@@ -8,13 +8,13 @@ Liste complète des shells :
 ./run£compile avec tous les fichers .c presents dans \"tests\" et \"tests/lib/my\" puis l'execute.£Votre seule fonction main doit etre dans \"tests/TESTER.c\"
 ./mkfile.sh \$Day \$main_function£cree le fichier correspondant avec le header complet et l'include pour write, malloc, free et libmy
 ./hmkfile.sh \$Day£cree le fichier correspondant dans 'tests/include' avec le header complet
-./mmkfile.sh \$Day£cree le makefile correspondant avec le header complet et les commandes
+./mmkfile.sh \$Day \$Executable_name£cree le makefile correspondant avec le header complet, les commandes + push, pull et sync, dont le make créé l'executable avec le nom désigné en paramètre
 ./append.sh \$Day \$filename£ajoute le fichier au repertoire correspondant et effectue un commit avec un message automatique
 ./sync.sh \$Day \$comment£met a jour le repertoire correspondant avec les fichiers presents dans 'tests' communs a ceux du repertoire cible£met aussi a jour les headers presents dans 'include' et la libraire 'lib'
 ./new_repository \$Day£Cree le repertoire correspondant, le clone, cree un dossier 'include' et copie 'lib' depuis 'tests/lib'
 ./Smkfile.sh \$Name \$main_function£cree le fichier correspondant avec le header complet et l'include pour write, malloc, free et libmy
 ./Shmkfile.sh \$Name£cree le fichier correspondant dans 'tests/include' avec le header complet
-./Smmkfile.sh \$Name£cree le makefile correspondant avec le header complet et les commandes
+./Smmkfile.sh \$Name \$Executable_name£cree le makefile correspondant avec le header complet et les commandes + push, pull et sync, dont le make créé l'executable avec le nom désigné
 ./Sappend.sh \$Name \$filename£ajoute le fichier au repertoire correspondant et effectue un commit avec un message automatique
 ./Ssync.sh \$Name \$comment£met a jour le repertoire correspondant avec les fichiers presents dans 'tests' communs a ceux du repertoire cible£met aussi a jour les headers presents dans 'include' et la libraire 'lib'
 ./Snew_repository \$Day£Cree le repertoire correspondant, le clone, cree un dossier 'include' et copie 'lib' depuis 'tests/lib'
