@@ -22,8 +22,8 @@ Utilisez simplement la commande suivante :
 - ./mkfile.sh $Day $main_function  
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free, et la fonction principale dans "tests" puis l'ouvre avec emacs  
 - ./mmkfile.sh $Day $Executabe_name
-  créé le makefile correspondant avec le header complet (pour Smmkfile, ouvre le makefile créé pour vérifier le header)
-  **Attention : Ne compile pas la librairie.**
+  créé le makefile correspondant avec le header complet (pour Smmkfile, ouvre le makefile créé pour vérifier le header)  
+  **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
 - ./append.sh $Day $filename  
   ajoute le fichier au répertoire correspondant et effectue un commmit avec un message généré automatiquement  
 - ./sync.sh $Day $comment  
