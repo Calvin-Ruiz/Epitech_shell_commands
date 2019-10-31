@@ -8,7 +8,7 @@ echo -e -n "##
 NAME = $2
 
 FILES = " > "CPool_$1_2019/Makefile"
-tree -i -f "CPool_$1_2019" | cat | grep "\.c" | sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n    /g" | sed "s/CPool_$1_2019\///g" >> "CPool_$1_2019/Makefile"
+tree -i -f "CPool_$1_2019" | cat | grep "\.c" | grep -v "bonus" | sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/CPool_$1_2019\///g" >> "CPool_$1_2019/Makefile"
 echo -e "
 
 all :	\$(NAME)
@@ -26,17 +26,25 @@ re:	fclean all
 
 prepush:	fclean
 	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~
+	git add --all
+	git status
 
 tree:	prepush
 	tree -a -I .git
 
 push:	prepush
-	git add --all
-	git commit -m \"auto-push\"
+	git commit -m 'auto-sync with master'
 	git push origin master
 
 pull:
 	git pull origin master
 
-sync:	pull	push" >> "CPool_$1_2019/Makefile"
-emacs "CPool_$1_2019/Makefile"
+sync:	pull	push
+
+debug:
+	clear
+	gcc -o \$(NAME) \$(FILES) -Wall -Wextra
+
+valgrind:
+	gcc -g3 -o \$(NAME) \$(FILES)" >> "CPool_$1_2019/Makefile"
+emacs -nw "CPool_$1_2019/Makefile"
