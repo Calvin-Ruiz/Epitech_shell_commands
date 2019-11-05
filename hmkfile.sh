@@ -1,6 +1,11 @@
 #!/bin/bash
-cd "tests/include"
-echo -e "/*\n** EPITECH PROJECT, 2019\n** C Pool Day $1\n** File description:\n** $2.h\n*/\n" > "$2.h"
+cd "$1_2019"
+cd "include"
+echo -e -n "/*\n** EPITECH PROJECT, 2019\n** $1\n** File description:\n** $2.h\n*/\n\n#ifndef " > "$2.h"
+echo "$2_H_" | tr [a-z] [A-Z] >> "$2.h"
+echo -e -n "#define " >> "$2.h"
+echo "$2_H_" | tr[a-z] [A-Z] >> "$2.h"
+echo -e -n "\n\n\n#endif /* "
+echo "$2_H_" | tr[a-z] [A-Z] >> "$2.h"
+echo -e -n " */" >> "$2.h"
 emacs -nw "$2.h"
-cd ..
-echo "$2.h " >> created
