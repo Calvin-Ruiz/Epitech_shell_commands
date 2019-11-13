@@ -19,7 +19,7 @@ rm -f -r Epitech_shell_commands
 touch temp.sh
 touch appened
 touch created
-chmod 755 run new_repository.sh mkfile.sh hmkfile.sh mkfile.sh Snew_repository.sh Ssync.sh Smkfile.sh Shmkfile.sh Sappend.sh Shappend.sh Smmkfile.sh update.sh help.sh temp.sh push.sh add_user.sh Dnew_repository.sh Dsync.sh Dmkfile.sh Dhmkfile.sh Dappend.sh Dhappend.sh Dmmkfile.sh
+chmod 755 run new_repository.sh mkfile.sh hmkfile.sh mmkfile.sh Snew_repository.sh Ssync.sh Smkfile.sh Shmkfile.sh Sappend.sh Shappend.sh Smmkfile.sh update.sh help.sh temp.sh push.sh add_user.sh Dnew_repository.sh Dsync.sh Dmkfile.sh Dhmkfile.sh Dappend.sh Dhappend.sh Dmmkfile.sh
 mkdir -p ./tests/include
 mv TESTER.c tests/TESTER.c
 cd tests
