@@ -20,8 +20,10 @@ Liste complète des shells :
 ./Shappend.sh \$Name \$headername£ajoute le header au repertoire correspondant et effectue un commit avec un message automatique
 ./Ssync.sh \$Name \$comment£met a jour le repertoire correspondant avec les fichiers presents dans 'tests' communs a ceux du repertoire cible£met aussi a jour les headers presents dans 'include' et la libraire 'lib'
 ./Snew_repository \$Day£Cree le repertoire correspondant, le clone, cree un dossier 'include' et copie 'lib' depuis 'tests/lib'
+./mmkfile.sh \$Project£Cree un makefile incluant tous les ficher .c presents dans le repertoire et ses sous-dossiers£Exclut le contenu du dossier 'bonus'
 ./update.sh£Met a jour ces shells
-./new_repository \$Project£Cree le repertoire correspondant, le clone et cree un dossier 'include'
+./new_repository.sh \$Project£Cree le repertoire correspondant en ajoutant '_2019' à la fin du nom du projet,£le clone et cree un dossier 'include' a l'interieur
+../push.sh \$commit_name£Effectue un pull puis un push avec le commentaire indiqué£Doit être utilisé depuis la racine du répertoire de travail (exemple : depuis le répertoire CPool_match-nmatch_2019)
 
 \$Day designe le numéro du jour (par exemple 01, 02 ou encore 05)
 \$Name designe le nom du projet (par exemple match-nmatch, ou encore firtree)
