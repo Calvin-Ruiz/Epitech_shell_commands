@@ -19,19 +19,21 @@ Utilisez simplement la commande suivante :
 ***Commandes***
 - ./run
   compile et lance la totalité du contenu de "tests" et "tests/lib/my" (note : la fonction main doit être dans "TESTER.c")
-- ./mkfile.sh $Day $main_function  
+- ./Dmkfile.sh $Day $main_function  
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free, et la fonction principale dans "tests" puis l'ouvre avec emacs  
-- ./mmkfile.sh $Day $Executabe_name
+- ./Dhmkfile.sh $Day $header_name
+  créé le header correspondant avec le header complet et l'include guard (uniquement pour ./hmkfile) et l'ouvre avec emacs.
+- ./Dmmkfile.sh $Day $Executabe_name
   créé le makefile correspondant avec le header complet (pour Smmkfile, ouvre le makefile créé pour vérifier le header)  
   **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
-- ./append.sh $Day $filename  
+- ./Dappend.sh $Day $filename  
   ajoute le fichier au répertoire correspondant et effectue un commmit avec un message généré automatiquement  
-- ./sync.sh $Day $comment  
+- ./Dsync.sh $Day $comment  
   met à jour tous les **fichiers** déjà **présents dans le répertoire désigné** avec ceux de "tests"  
     effectue un commit avec $comment comme description du commit (à écrire entre guillements (exemple : "update task04"))  
       **Attention : n'inclut pas les sous-fichiers (sauf pour 'lib' et 'include')**  
       *Note : Je n'ai pas réussi à enlever les messages d'erreurs, mais il fonctionne.*  
-- ./new_repository.sh $Day  
+- ./Dnew_repository.sh $Day  
   créé un nouveau répertoire, le clone et y implémente le contenu de tests/lib  
   pour la version SANS "S" devant, lance ./update.sh après avoir créé le nouveau répertoire  
 - ./help.sh $command_name  
@@ -41,7 +43,8 @@ Utilisez simplement la commande suivante :
 $Day désigne le numéro du jour (par exemple 01, 02 ou encore 05)  
 $main_function désigne la fonction principale (par exemple my_put_nbr ou my_strlen)  
 $filename désigne le nom du fichier  
-Pour les fichiers avec "S" ajouté devant, $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")  
+Pour les fichiers avec "S" au lieu de "D", $Day est remplacé par le nom du projet (pour CPool_Tree_2019 il faut entrer "Tree")  
+Pour les fichiers sans "D" ni "S" devant, $Day est remplacé par le nom du répertoire
 Les fichiers avec "h" ajouté devant sont pour les headers.
 
 ***Attention : Il est nécessaire de savoir créer un répertoire, effectuer un commit et compiler sans ces shells.***  
