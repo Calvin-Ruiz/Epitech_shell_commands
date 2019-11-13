@@ -15,7 +15,7 @@ echo -e "
 all :	\$(NAME)
 
 \$(NAME):
-	gcc -o \$(NAME) \$(FILES)
+	gcc -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system
 
 clean:
 	rm -f *.o
@@ -44,8 +44,11 @@ sync:	pull	push
 
 debug:
 	clear
-	gcc -o \$(NAME) \$(FILES) -Wall -Wextra
+	gcc -o \$(NAME) \$(FILES) -Wall -Wextra -lcsfml-graphics -lcsfml-window -lcsfml-system
 
 valgrind:
-	gcc -g3 -o \$(NAME) \$(FILES)" >> "Makefile"
+	gcc -g3 -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system
+
+update:
+	../mmkfile.sh $1 $2" >> "Makefile"
 emacs -nw "Makefile"
