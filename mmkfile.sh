@@ -9,16 +9,17 @@ echo -e -n "##
 NAME = $2
 
 FILES = " > "Makefile"
-tree -i -f "." | cat | grep "\.c" | grep -v "bonus" | sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
+tree -i -f "." | cat | grep "\.c" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
 echo -e "
 
 all :	\$(NAME)
 
 \$(NAME):
-	gcc -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system
+	gcc -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 clean:
 	rm -f *.o
+	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~ 
 
 fclean:	clean
 	rm -f \$(NAME)
@@ -26,7 +27,6 @@ fclean:	clean
 re:	fclean all
 
 prepush:	fclean
-	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~
 	git add --all
 	git status
 
@@ -44,11 +44,15 @@ sync:	pull	push
 
 debug:
 	clear
-	gcc -o \$(NAME) \$(FILES) -Wall -Wextra -lcsfml-graphics -lcsfml-window -lcsfml-system
+	gcc -o \$(NAME) \$(FILES) -Wall -Wextra -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 valgrind:
-	gcc -g3 -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system
+	gcc -g3 -o \$(NAME) \$(FILES) -lcsfml-graphics -lcsfml-window -lcsfml-system -lcsfml-audio
 
 update:
-	../mmkfile.sh $1 $2" >> "Makefile"
-emacs -nw "Makefile"
+	../mmkfile.sh $1 $2
+
+entitylib:
+	gcc -c entitylib/*\.c entitylib/*/*\.c
+	ar rc entitylib.a *\.o entitylib/*\.o entitylib/*/*\.o
+	rm -f *\.o entitylib/*\.o entitylib/*/*\.o" >> "Makefile"
