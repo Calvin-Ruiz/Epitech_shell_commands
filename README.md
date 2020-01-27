@@ -22,13 +22,14 @@ update_shells
 - new_repository $repository_name $Executable_name $makefile_flags  
   créé un nouveau répertoire, attribue le droit de lecture à ramassage-tek, le clone,  
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
-  créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis 
-  effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé)
-- add_user $repository_name $user_to_add
-  donne les droit de lecture et d'écriture à l'utilisateur nommé (exemple : add_user PSU_my_ls_2019 firstname.lastname@epitech.eu)
-- my_clone $repository_name
-  clone le répertoire nommé
-- my_push "$commit_name"
+  créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis  
+  effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé)  
+- add_user $repository_name $user_to_add  
+  donne les droit de lecture et d'écriture à l'utilisateur nommé  
+  (exemple : add_user PSU_my_ls_2019 firstname.lastname@epitech.eu)  
+- my_clone $repository_name  
+  clone le répertoire nommé  
+- my_push "$commit_name"  
   effectue un "make clean", un pull puis un push avec le nom de commit donné
 
 $file_name désigne le nom du fichier  
