@@ -1,5 +1,4 @@
 #!/bin/bash
-cd "$1"
 cd "include"
 echo -e -n "/*\n** EPITECH PROJECT, 2019\n** $1\n** File description:\n** $2.h\n*/\n\n#ifndef " > "$2.h"
 echo "$2_H_" | tr [a-z] [A-Z] >> "$2.h"

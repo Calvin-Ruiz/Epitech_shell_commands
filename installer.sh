@@ -8,6 +8,7 @@ git clone \"git@git.epitech.eu:/$1/\$1\"
 cd \"\$1\"
 mkdir \"include\"
 echo -e \"/*\n** EPITECH PROJECT, 2019\n** \$1\n** File description:\n** main.c\n*/\n#include <stdlib.h>\n#include <unistd.h>\n#include <main.h>\n\nint main(int ac, char **av)\n{\n    \n}\" > \"main.c\"
+cp -r ~/Repository_bases/* .
 hmkfile \"\$1\" \"main\"
 mmkfile \"\$1\" \"\$2\" \"\$3 -I include\"
 echo -e \".gitignore\n\$2\nvgcore*\" > .gitignore
@@ -17,6 +18,11 @@ git commit -m \"create repository base\"
 git push origin master
 atom ." > new_repository
 echo "git clone git@git.epitech.eu:/$1/\$1" > my_clone
-echo 'blih -u $1 repository setacl "\$1" "\$2" rw' > add_user
+echo "blih -u $1 repository setacl "\$1" "\$2" rw" > add_user
+echo "git clone https://github.com/Calvin-Ruiz/Epitech_shell_commands.git
+chmod 777 Epitech_shell_commands/installer.sh
+Epitech_shell_commands/installer.sh $1
+rm -r -f Epitech_shell_commands" > update_shells
+
 chmod 755 new_repository my_clone add_user
 
