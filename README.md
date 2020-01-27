@@ -16,7 +16,7 @@ update_shells
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
 - hmkfile $repository_name $header_name  
   créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
-- mmkfile $repository_name $Executabe_name $flags  
+- mmkfile $repository_name $Executabe_name "$flags"  
   créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
   **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
 - new_repository $repository_name $Executable_name $makefile_flags  
@@ -32,7 +32,12 @@ update_shells
 - my_push "$commit_name"  
   effectue un "make clean", un pull puis un push avec le nom de commit donné
 
-$file_name désigne le nom du fichier  
+Remplacer $repository_name par le nom du répertoire  
+Remplacer $file_name par le nom du fichier sans l'extension .c  
+Remplacer $header_name par le nom du header sans l'extension .h  
+Remplacer $Executable_name par le nom de l'executable  
+Remplacer $flags par les flags avec lesquel compiler l'executable pour le gcc  
+Remplacer $user_to_add par le nom de l'utilisateur (exemple : firstname.lastname@epitech.eu)  
 
 ***Attention : Il est nécessaire de savoir créer un répertoire, un makefile, effectuer un commit et compiler sans ces shells.***  
 Il est possible que ces commandes ne fonctionnent pas pour tous les cas de figures.  
