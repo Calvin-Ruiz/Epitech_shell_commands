@@ -2,6 +2,9 @@
 Cette nouvelle version est centrée sur des shells plus simples d'utilisation, pour gagner beaucoup de temps dans la création de nouveaux répertoires, le débug et diverses manipulations.
 
 ***Installation :***  
+Cloner ce répertoire avec la commande suivante :  
+git clone https://github.com/Calvin-Ruiz/Epitech_shell_commands.git  
+Aller dans le répertoire Epitech_shell_commands.  
 Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :  
 ./installer.sh $epitech_email_adress  
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)  
