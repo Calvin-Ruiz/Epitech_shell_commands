@@ -1,5 +1,5 @@
 #!/bin/bash
-cd "$1_2019"
+cd "$1"
 echo -e -n "##
 ## EPITECH PROJECT, 2019
 ## $1

@@ -17,6 +17,6 @@ git commit -m "create repository base"
 git push origin master
 atom .' > new_repository
 echo "git clone git@git.epitech.eu:/$1/\$1" > my_clone
-echo 'blih -u $1 repository setacl "\$1_2019" "\$2" rw' > add_user
+echo 'blih -u $1 repository setacl "\$1" "\$2" rw' > add_user
 chmod 755 new_repository my_clone add_user
 
