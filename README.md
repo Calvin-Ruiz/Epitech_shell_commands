@@ -10,11 +10,11 @@ Donner les droits d'exécution à "installer.sh" et l'exécuter comme suit :
 avec $epitech_email_adress l'adressse mail epitech (firstname.lastname@epitech.eu)  
 Pour ceux qui n'utilisent pas fedora, supprimer le flag "-e" devant "echo" dans tous les shells présents dans ~/bin  
 
-***Update :***
+***Update :***  
 Utilisez simplement la commande suivante :  
 update_shells  
 
-***Commandes***
+***Commandes***  
 - mkfile $repository_name $file_name  
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
 - hmkfile $repository_name $header_name  
@@ -35,7 +35,7 @@ update_shells
 - my_push "$commit_name"  
   effectue un "make clean", un pull puis un push avec le nom de commit donné
 
-***Makefile tools***
+***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
 - tree : effectue un prepush et affiche l'arborescence du répertoire (.git exclut)  
 - debug : compile en affichant les warnings supplémentaires (extra warnings)  
