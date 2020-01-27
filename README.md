@@ -13,9 +13,9 @@ update_shells
 
 ***Commandes***
 - mkfile $repository_name $file_name  
-  créé le fichier correspondant avec le header complet, l'include pour write, malloc et free  
+  créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
 - hmkfile $repository_name $header_name  
-  créé le header correspondant avec le header complet et l'include guard  
+  créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
 - mmkfile $repository_name $Executabe_name $flags  
   créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
   **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
