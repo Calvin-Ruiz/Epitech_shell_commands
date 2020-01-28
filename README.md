@@ -33,7 +33,7 @@ update_shells
 - my_clone $repository_name  
   clone le répertoire nommé  
 - my_push "$commit_name"  
-  effectue un "make clean", un pull, un git add --all et un git commit puis un push avec le nom de commit donné
+  effectue un "make clean", un git pull, add --all, commit et push avec le nom de commit donné en argument
 
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
