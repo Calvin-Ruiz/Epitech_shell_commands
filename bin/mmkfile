@@ -1,18 +1,18 @@
 #!/bin/bash
 echo -e -n "##
 ## EPITECH PROJECT, 2019
-## $1
+## $(get_highest_level $PWD)
 ## File description:
 ## Makefile
 ##
 
-NAME = $2
+NAME = $1
 
 FILES = " > "Makefile"
 tree -i -f "." | cat | grep "\.c" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
 echo -e "
 
-FLAGS = $3
+FLAGS = $2
 
 all :	\$(NAME)
 
@@ -46,10 +46,12 @@ sync:	pull	push
 
 debug:
 	clear
-	gcc -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS)
+	gcc -g3 -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS)
 
 valgrind:
+	clear
 	gcc -g3 -o \$(NAME) \$(FILES) \$(FLAGS)
 
 update:
-	mmkfile $1 $2 \"$3\"" >> Makefile
+	mmkfile $1 \"$2\"" >> Makefile
+echo "Makefile created"
