@@ -49,7 +49,7 @@ Remplacer $Executable_name par le nom de l'executable
 Remplacer $flags par les flags avec lesquel compiler l'executable pour le gcc  
 Remplacer $user_to_add par le nom de l'utilisateur (exemple : firstname.lastname@epitech.eu)  
 
-***Attention : Il est nécessaire de savoir créer un répertoire, un makefile, effectuer un commit et compiler sans ces shells.***  
+***Attention : Il est nécessaire de savoir créer et gérer un répertoire, un makefile, effectuer un commit et compiler sans ces shells.***  
 Il est possible que ces commandes ne fonctionnent pas pour tous les cas de figures.  
 Ces commandes ont été conçu pour le bash sur Fedora 30 et ne fonctionneront pas forcément sur un autre système d'exploitation ou de commande.  
 Il faut donc être capable d'effectuer ces actions sans l'aide de ces shell pour être paré à toute éventualité.
