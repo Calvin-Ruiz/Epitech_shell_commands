@@ -15,7 +15,7 @@ Utilisez simplement la commande suivante :
 update_shells  
 
 ***Commandes***  
-- new_repository $repository_name $Executable_name $makefile_flags  
+- new_repository $repository_name $Executable_name "$makefile_flags"  
   créé un nouveau répertoire, attribue le droit de lecture à ramassage-tek, le clone,  
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
   créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis  
