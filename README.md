@@ -38,7 +38,7 @@ update_shells
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
 - tree : effectue un prepush et affiche l'arborescence du répertoire (.git exclut)  
-- debug : compile en affichant les warnings supplémentaires (extra warnings)  
+- debug : compile avec -g3 en affichant les warnings supplémentaires (extra warnings)  
 - valgrind : compile avec le flag -g3 pour utiliser valgrind ou gdb sur l'executable  
 - update : met à jour le Makefile (à utiliser après avoir créé, supprimé ou déplacé un ou plusieurs fichier(s) .c)  
 
