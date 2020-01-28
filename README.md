@@ -15,13 +15,6 @@ Utilisez simplement la commande suivante :
 update_shells  
 
 ***Commandes***  
-- mkfile $file_name  
-  créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
-- hmkfile $header_name  
-  créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
-- mmkfile $Executabe_name "$flags"  
-  créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
-  **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
 - new_repository $repository_name $Executable_name $makefile_flags  
   créé un nouveau répertoire, attribue le droit de lecture à ramassage-tek, le clone,  
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
@@ -33,7 +26,14 @@ update_shells
 - my_clone $repository_name  
   clone le répertoire nommé  
 - my_push "$commit_name"  
-  effectue un "make clean", un git pull, add --all, commit et push avec le nom de commit donné en argument
+  effectue un "make clean", un git pull, add --all, commit et push avec le nom de commit donné en argument  
+- mkfile $file_name  
+  créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
+- hmkfile $header_name  
+  créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
+- mmkfile $Executabe_name "$flags"  
+  créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
+  **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**  
 
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
