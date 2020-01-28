@@ -15,11 +15,11 @@ Utilisez simplement la commande suivante :
 update_shells  
 
 ***Commandes***  
-- mkfile $repository_name $file_name  
+- mkfile $file_name  
   créé le fichier correspondant avec le header complet, l'include pour write, malloc et free (ne pas entrer l'extension .c)  
-- hmkfile $repository_name $header_name  
+- hmkfile $header_name  
   créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
-- mmkfile $repository_name $Executabe_name "$flags"  
+- mmkfile $Executabe_name "$flags"  
   créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
   **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**
 - new_repository $repository_name $Executable_name $makefile_flags  
@@ -27,13 +27,13 @@ update_shells
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
   créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis  
   effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé)  
-- add_user $repository_name $user_to_add  
-  donne les droit de lecture et d'écriture à l'utilisateur nommé  
-  (exemple : add_user PSU_my_ls_2019 firstname.lastname@epitech.eu)  
+- add_user $user_to_add  
+  donne les droit de lecture et d'écriture à l'utilisateur nommé au répertoire courant  
+  (exemple : add_user firstname.lastname@epitech.eu)  
 - my_clone $repository_name  
   clone le répertoire nommé  
 - my_push "$commit_name"  
-  effectue un "make clean", un pull puis un push avec le nom de commit donné
+  effectue un "make clean", un pull, un git add --all et un git commit puis un push avec le nom de commit donné
 
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
