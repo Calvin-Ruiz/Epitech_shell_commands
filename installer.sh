@@ -16,7 +16,7 @@ rm -f *~
 git add --all
 git commit -m \"create repository base\"
 git push origin master
-atom ." > new_repository
+atom . || code ." > new_repository
 echo "git clone git@git.epitech.eu:/$1/\$1" > my_clone
 echo -n "blih -u $1 repository setacl \"\$(get_highest_level \$PWD)\" \"\$1\" rw" > add_user
 echo "git clone https://github.com/Calvin-Ruiz/Epitech_shell_commands.git
