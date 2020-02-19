@@ -18,6 +18,7 @@ update_shells
 - new_repository $repository_name $Executable_name "$makefile_flags"  
   créé un nouveau répertoire, attribue le droit de lecture à ramassage-tek, le clone,  
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
+  créé un Makefile qui inclut le main.c en ajoutant le flag -I include,  
   créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis  
   effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé)  
 - add_user $user_to_add  
