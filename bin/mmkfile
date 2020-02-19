@@ -19,6 +19,9 @@ all :	\$(NAME)
 \$(NAME):
 	gcc -o \$(NAME) \$(FILES) \$(FLAGS)
 
+fast:
+	gcc -Ofast -o \$(NAME) \$(FILES) \$(FLAGS)
+
 clean:
 	rm -f *.o
 	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~ vgcore*
@@ -53,5 +56,5 @@ valgrind:
 	gcc -g3 -o \$(NAME) \$(FILES) \$(FLAGS)
 
 update:
-	mmkfile $1 \"\$(FLAGS)\"" >> Makefile
+	mmkfile \$(NAME) \"\$(FLAGS)\"" >> Makefile
 echo "Makefile created"
