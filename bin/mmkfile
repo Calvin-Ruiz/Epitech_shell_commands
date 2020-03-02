@@ -23,7 +23,7 @@ fast:
 	gcc -Ofast -o \$(NAME) \$(FILES) \$(FLAGS)
 
 clean:
-	rm -f *.o
+	rm -f *.o ./*/*.o ./*/*/*.o ./*/*/*/*.o
 	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~ vgcore*
 
 fclean:	clean
@@ -43,7 +43,7 @@ push:	prepush
 	git push origin master
 
 pull:
-	git pull origin master
+	git fetch origin master && git pull origin master
 
 sync:	pull	push
 
@@ -57,4 +57,4 @@ valgrind:
 
 update:
 	mmkfile \$(NAME) \"\$(FLAGS)\"" >> Makefile
-echo "Makefile created"
+echo "Makefile created/updated"

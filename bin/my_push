@@ -1,2 +1,2 @@
 #!/bin/bash
-make clean && git pull origin master && git add --all && git commit -m "$1$2" && git push origin master
+make fclean && git pull origin master && git add --all && git commit -m "$1$2" && git push origin master
