@@ -19,8 +19,8 @@ update_shells
   créé un nouveau répertoire, attribue le droit de lecture à ramassage-tek, le clone,  
   créé un dossier include et y créé un fichier main.h, créé la base de main.c qui inclut le header main.h,  
   créé un Makefile qui inclut le main.c en ajoutant le flag -I include,  
-  créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis  
-  effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé)  
+  créé un .gitignore pour ignorer .gitignore, l'executable et les vgcore*, puis copie le contenu de ~/Repository_bases puis  
+  effectue un premier commit nommé "create repository base" et l'ouvre avec atom (si atom est installé) sinon vscode  
 - add_user $user_to_add  
   donne les droit de lecture et d'écriture à l'utilisateur nommé au répertoire courant  
   (exemple : add_user firstname.lastname@epitech.eu)  
