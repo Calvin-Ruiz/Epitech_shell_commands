@@ -34,7 +34,8 @@ update_shells
   créé le header correspondant avec le header complet et l'include guard (ne pas entrer l'extension .h)  
 - mmkfile $Executabe_name "$flags"  
   créé le makefile correspondant avec le header complet et beaucoup de commandes utiles  
-  **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas à la compilation du binaire**  
+  inclut automatiquement tous les dossiers "include" (avec le flag -I)  
+  **Attention : Le Makefile généré ne compile pas la librairie libmy.a et ne l'inclut pas par défaut**  
 
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
