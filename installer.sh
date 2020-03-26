@@ -7,9 +7,9 @@ blih -u $1 repository setacl \"\$1\" ramassage-tek r || blih -u $1 repository se
 git clone \"git@git.epitech.eu:/$1/\$1\"
 cd \"\$1\"
 mkdir \"include\"
-echo -e \"/*\n** EPITECH PROJECT, 2019\n** \$1\n** File description:\n** main.c\n*/\n#include <stdlib.h>\n#include <unistd.h>\n#include <main.h>\n\nint main(int ac, char **av)\n{\n    \n}\" > \"main.c\"
+echo -e \"/*\n** EPITECH PROJECT, 2019\n** \$1\n** File description:\n** main.c\n*/\n#include <stdlib.h>\n#include <unistd.h>\n#include <main.h>\n\nint main(int ac, char **av)\n{\n    \n    return (0);\n}\" > \"main.c\"
 hmkfile \"main\"
-mmkfile \"\$2\" \"\$3 -I include\"
+mmkfile \"\$2\" \"\$3\"
 cp -r ~/Repository_bases/* .
 echo -e \".gitignore\n\$2\nvgcore*\" >> .gitignore
 rm -f *~

@@ -12,18 +12,20 @@ FILES = " > "Makefile"
 tree -i -f "." | cat | grep "\.c" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
 echo -e "
 
+INCLUDES = $(tree -if '.' | grep "include$" | grep -v "bonus" | sed "s/\.\//-I /g" | tr "\n" " ")
+
 FLAGS = $2
 
-all :	\$(NAME)
+all:	\$(NAME)
 
 \$(NAME):
-	gcc -o \$(NAME) \$(FILES) \$(FLAGS)
+	gcc -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 fast:
-	gcc -Ofast -o \$(NAME) \$(FILES) \$(FLAGS)
+	gcc -Ofast -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 clean:
-	rm -f *.o ./*/*.o ./*/*/*.o ./*/*/*/*.o
+	rm -f *.o
 	rm -f *# *~ ./*/*# ./*/*~ ./*/*/*# ./*/*/*~ vgcore*
 
 fclean:	clean
@@ -43,18 +45,18 @@ push:	prepush
 	git push origin master
 
 pull:
-	git fetch origin master && git pull origin master
+	git pull origin master
 
 sync:	pull	push
 
 debug:
 	clear
-	gcc -g3 -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS)
+	gcc -g3 -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS) \$(INCLUDES)
 
 valgrind:
 	clear
-	gcc -g3 -o \$(NAME) \$(FILES) \$(FLAGS)
+	gcc -g3 -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 update:
 	mmkfile \$(NAME) \"\$(FLAGS)\"" >> Makefile
-echo "Makefile created/updated"
+echo "Makefile created"
