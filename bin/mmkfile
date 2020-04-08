@@ -9,7 +9,7 @@ echo -e -n "##
 NAME = $1
 
 FILES = " > "Makefile"
-tree -i -f "." | cat | grep "\.c" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
+tree -i -f "." | cat | grep "\.c$" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
 echo -e "
 
 INCLUDES = $(tree -if '.' | grep "include$" | grep -v "bonus" | sed "s/\.\//-I /g" | tr "\n" " ")
