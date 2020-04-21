@@ -40,9 +40,11 @@ update_shells
 ***Makefile tools***  
 - prepush : effectue un fclean, un git add --all et un git status pour voir quels fichiers seront commités  
 - tree : effectue un prepush et affiche l'arborescence du répertoire (.git exclut)  
-- debug : compile avec -g3 en affichant les warnings supplémentaires (extra warnings)  
+- debug : recompile avec -g3 en affichant les warnings supplémentaires (extra warnings)  
 - valgrind : compile avec le flag -g3 pour utiliser valgrind ou gdb sur l'executable  
-- update : met à jour le Makefile (à utiliser après avoir créé, supprimé ou déplacé un ou plusieurs fichier(s) .c)  
+- update : met à jour le Makefile (à utiliser après avoir créé, supprimé ou déplacé un ou plusieurs fichier(s) .c et/ou dossier(s) "include")  
+- full : met à jour le Makefile et recompile  
+- fulld : met à jour le Makefile et recompile avec -g3 en affichant les warnings supplémentaires  
 
 Remplacer $repository_name par le nom du répertoire  
 Remplacer $file_name par le nom du fichier sans l'extension .c  
