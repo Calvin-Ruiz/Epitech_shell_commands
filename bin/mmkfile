@@ -1,6 +1,6 @@
 #!/bin/bash
 echo -e -n "##
-## EPITECH PROJECT, 2019
+## EPITECH PROJECT, 2020
 ## $(get_highest_level $PWD)
 ## File description:
 ## Makefile
@@ -9,7 +9,15 @@ echo -e -n "##
 NAME = $1
 
 FILES = " > "Makefile"
-tree -i -f "." | cat | grep "\.c$" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
+tree -i -f "." | cat | grep "\.cpp$" | grep -v "bonus/"| grep -v "tests/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
+echo -e -n "
+
+TESTS = " >> "Makefile"
+tree -i -f "tests/" | cat | grep "\.cpp$" | grep -v "bonus/"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
+echo -e -n "
+
+TESTS_TARGET = " >> "Makefile"
+tree -i -f "." | cat | grep "\.cpp$" | grep -v "bonus/"| grep -v "tests/"| grep -v "/main.c"| sed -z "s/\n/ @£/g" | sed "s/ @£$//g" | tr "@" "\\" | sed -z "s/£/\n	/g" | sed "s/\.\///g" >> "Makefile"
 echo -e "
 
 INCLUDES = $(tree -if '.' | grep "include$" | grep -v "bonus" | sed "s/\.\//-I /g" | tr "\n" " ")
@@ -19,10 +27,10 @@ FLAGS = $2
 all:	\$(NAME)
 
 \$(NAME):
-	gcc -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
+	g++ -Wall -Wextra -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 fast:
-	gcc -Ofast -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
+	g++ -Ofast -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 clean:
 	rm -f *.o
@@ -57,11 +65,14 @@ sync:	pull	push
 
 debug:
 	clear
-	gcc -g3 -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS) \$(INCLUDES)
+	g++ -g3 -o \$(NAME) \$(FILES) -Wall -Wextra \$(FLAGS) \$(INCLUDES)
 
 valgrind:
 	clear
-	gcc -g3 -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
+	g++ -g3 -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
+
+tests_run:
+	g++ -o unit_tests \$(TESTS_TARGET) \$(TESTS) \$(FLAGS) \$(INCLUDES)
 
 update:
 	mmkfile \$(NAME) \"\$(FLAGS)\"" >> Makefile
