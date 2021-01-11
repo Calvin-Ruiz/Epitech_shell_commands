@@ -1,3 +1,2 @@
 #!/bin/bash
-echo -e "/*\n** EPITECH PROJECT, 2020\n** $(get_highest_level $PWD)\n** File description:\n** $1.cpp\n*/\n#include <iostream>\n" > "$1.cpp"
-emacs -nw "$1.cpp"
+echo -e "/*\n** EPITECH PROJECT, 2020\n** $(get_highest_level $PWD)\n** File description:\n** $1.cpp\n*/\n#include <iostream>\n#include <string>\n" > "$1.cpp"
