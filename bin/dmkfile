@@ -1,7 +1,6 @@
 #!/bin/bash
 echo -e "/*\n** EPITECH PROJECT, 2020\n** $(get_highest_level $PWD)\n** File description:\n** $1.cpp\n*/
 #include <iostream>
-#include <string>
 #include \"$1.hpp\"
 
 $1::$1()
@@ -16,6 +15,7 @@ echo "$1_H_" | tr [a-z] [A-Z] >> "$1.hpp"
 echo -e -n "#define " >> "$1.hpp"
 echo "$1_H_" | tr [a-z] [A-Z] >> "$1.hpp"
 echo -e "
+#include <string>
 
 class $1 {
 public:
