@@ -72,7 +72,7 @@ valgrind:
 	g++ -g3 -o \$(NAME) \$(FILES) \$(FLAGS) \$(INCLUDES)
 
 tests_run:
-	g++ -o unit_tests \$(TESTS_TARGET) \$(TESTS) \$(FLAGS) \$(INCLUDES)
+	g++ -o unit_tests \$(TESTS_TARGET) \$(TESTS) \$(FLAGS) \$(INCLUDES) --coverage -lcriterion
 
 update:
 	mmkfile \$(NAME) \"\$(FLAGS)\"" >> Makefile
