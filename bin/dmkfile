@@ -20,7 +20,7 @@ echo -e "
 class $1 {
 public:
     $1::$1();
-    $1::~$1();
+    virtual $1::~$1();
 private:
 };" >> "$1.hpp"
 echo -e -n "\n#endif /* " >> "$1.hpp"
