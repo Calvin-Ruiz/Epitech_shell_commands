@@ -20,8 +20,11 @@ atom . || code ." > new_repository
 echo "git clone git@git.epitech.eu:/$1/\$1 || git clone git@git.epitech.eu:/\$1" > my_clone
 echo -n "blih -u $1 repository setacl \"\$(get_highest_level \$PWD)\" \"\$1\" rw" > add_user
 echo "git clone https://github.com/Calvin-Ruiz/Epitech_shell_commands.git
-chmod 777 Epitech_shell_commands/installer.sh
-Epitech_shell_commands/installer.sh $1
-rm -r -f Epitech_shell_commands" > update_shells
+cd Epitech_shell_commands
+git checkout shell-tek2
+chmod 777 installer.sh
+./installer.sh $1
+cd ..
+rm -rf Epitech_shell_commands" > update_shells
 
 chmod 755 new_repository my_clone add_user update_shells
